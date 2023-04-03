@@ -1,5 +1,5 @@
 const { loginQuery } = require('../database/query')
-const connection_sql = require('../database/sql_connection')
+const {connection_sql} = require('../database/sql_connection')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
@@ -7,11 +7,14 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+const login_render =(req,res)=>{
+  res.render("login")
+}
+
 const login = (req, res) => { 
-     const aadhar  = req.body
-     console.log(connection_sql);
-     const fetchQuery = loginQuery (aadhar)
-      connection_sql.query (fetchQuery, (err,result)=>{
+     const {aadhar } = req.body
+     console.log(aadhar);
+      connection_sql.query(loginQuery(aadhar), (err,result)=>{
         
         if (err) {
           console.log(err);
@@ -19,7 +22,7 @@ const login = (req, res) => {
         } else {
         
           if (result.length > 0) {
-                res.send ( result)
+                res.send (result)
 
         
           } else {
@@ -31,4 +34,4 @@ const login = (req, res) => {
    
 }
 
-module.exports= { login}
+module.exports= { login_render, login}

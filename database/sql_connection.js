@@ -10,3 +10,4 @@ const   connection_sql = mysql.createConnection({
 module.exports={
     connection_sql
 }
+

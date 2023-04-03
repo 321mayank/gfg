@@ -1,4 +1,4 @@
-const connection_sql = require('./sql_connection')
+const connection_sql = require('../database/sql_connection')
 
 const loginQuery = (aadhar)=>{
     return `SELECT * FROM user WHERE AadharNo='${aadhar}'`
