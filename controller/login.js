@@ -22,7 +22,7 @@ const login = (req, res) => {
         } else {
         
           if (result.length > 0) {
-                res.send (result)
+                res.redirect('/userDashboard')
 
         
           } else {
@@ -33,5 +33,7 @@ const login = (req, res) => {
       })
    
 }
+
+
 
 module.exports= { login_render, login}
