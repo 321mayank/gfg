@@ -9,5 +9,12 @@ const userDashboard =(req,res)=>{
   res.render("userDashboard")
 }
 
+const profileView = (req, res) => {
+ 
+  const name  = req.session.aadhar
+  console.log(name)
+  res.send(name)
+};
 
-module.exports={ userDashboard}
+
+module.exports={ userDashboard , profileView}

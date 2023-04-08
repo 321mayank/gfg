@@ -2,6 +2,7 @@ const { loginQuery } = require('../database/query')
 const {connection_sql} = require('../database/sql_connection')
 const express = require('express')
 const app = express()
+const session = require('express-session');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,7 +23,17 @@ const login = (req, res) => {
         } else {
         
           if (result.length > 0) {
-                res.redirect('/userDashboard')
+            const {AadharNo,FirstName,LastName,DOB,GuardianName,GuardianRelation,Age,Gender,Email  } = result;
+              req.session.aadharNo = AadharNo;
+              req.session.firstName = FirstName;
+              req.session.lastName = LastName;
+              req.session.dob = DOB;
+              req.session.guardianName = GuardianName;
+              req.session.guardianRelation = GuardianRelation;
+              req.session.age = Age;
+              req.session.gender = Gender;
+              req.session.email = Email
+            res.redirect('/userDashboard')
 
         
           } else {
