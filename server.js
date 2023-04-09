@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 
 app.use('/', login_router);
 
-app.use(express.static('public'));
 app.get('/', (req, res) => { //rendered the login page
     res.render('index');
 })
