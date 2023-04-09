@@ -23,16 +23,16 @@ const login = (req, res) => {
         } else {
         
           if (result.length > 0) {
-            const {AadharNo,FirstName,LastName,DOB,GuardianName,GuardianRelation,Age,Gender,Email  } = result;
+            console.log(result)
+            const {AadharNo,FirstName,LastName,GuardianName,GuardianRelation,Age,Gender,Email  } = result[0];
               req.session.aadharNo = AadharNo;
-              req.session.firstName = FirstName;
+              req.session.firstName = FirstName; 
               req.session.lastName = LastName;
-              req.session.dob = DOB;
               req.session.guardianName = GuardianName;
               req.session.guardianRelation = GuardianRelation;
               req.session.age = Age;
               req.session.gender = Gender;
-              req.session.email = Email
+              req.session.email = Email;
             res.redirect('/userDashboard')
 
         
