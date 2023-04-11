@@ -23,7 +23,6 @@ const login = (req, res) => {
         } else {
         
           if (result.length > 0) {
-            console.log(result)
             const {AadharNo,FirstName,LastName,GuardianName,GuardianRelation,Age,Gender,Email  } = result[0];
               req.session.aadharNo = AadharNo;
               req.session.firstName = FirstName; 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Health Records</title>
+  </head>
+  <body>
+    <h1>Health Records</h1>
+    <% if (records.length > 0) { %>
+      <% records.forEach((record, index) => { %>
+        <h2>Record <%= index + 1 %></h2>
+        <p> Hospital Name: <%= record.hospitalName %></p> 
+        <p>Doctor Name: <%= record.doctorName %></p>
+        <p>Department: <%= record.department %></p> 
+        <p>date: <%= record.date %></p>
+      <% }); %>
+    <% } else { %>
+      <p>No records found.</p>
+    <% } %>
+  </body>
+</html>

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 app.set('view engine', 'ejs');
 const login_router = require('./route/login')
 const dashboard = require('./route/dashboard')
+const records = require('./route/userHealthReords')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -21,7 +22,7 @@ app.get('/', (req, res) => { //rendered the login page
 
 app.use('/',login_router);
 app.use('/',dashboard)
-
+app.use('/',records)
 
 
 app.listen(8000, () => {
