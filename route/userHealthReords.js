@@ -5,7 +5,7 @@ const { fetchHealthRecords } = require('../controller/userHealthRecords')
 const records = express.Router()
 records.use(
     session({
-      secret: 'paroisbewda',
+      secret: 'IEMGFGTEAM',
       resave: true,
       saveUninitialized: true,
     })

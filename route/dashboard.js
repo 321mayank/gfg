@@ -5,7 +5,7 @@ const {userDashboard , profileView} = require('../controller/dashboard')
 const dashboard = express.Router()
 dashboard.use(
     session({
-      secret: 'paroisbewda',
+      secret: 'IEMGFGTEAM',
       resave: true,
       saveUninitialized: true,
     })

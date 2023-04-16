@@ -6,7 +6,7 @@ const login_router = express.Router();
 const { login_render, login } = require('../controller/login');
 login_router.use(
     session({
-      secret: 'paroisbewda',
+      secret: 'IEMGFGTEAM',
       resave: true,
       saveUninitialized: true,
     })

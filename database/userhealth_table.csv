@@ -1,0 +1,5 @@
+[{"s.no":1, "hospitalHRN":"C8T1R7N0D6E2G9", "hospitalName":"All India Institute of Medical Sciences (AIIMS)", "doctorName":"Dr. Arun Das", "patientName":"Nisha Goyel", "department":"General medicine", "date":"10/04/2023", "aadharNo":"6728563985"},
+ {"s.no":2, "hospitalHRN":"F4P9X2S6Z1V0K5", "hospitalName":"Government Medical College and Hospital ", "doctorName":"Dr. Devi Shetty", "patientName":"Nisha Goyel", "department":"Cardiology", "date":"02/03/2023", "aadharNo":"6728563985"},
+ {"s.no":3, "hospitalHRN":"L7B2M1Q0J8H6D3", "hospitalName":"Apollo Hospitals", "doctorName":"Dr. Soham Badrinath", "patientName":"Nisha Goyel", "department":"Dermatology", "date":"12/02/2023", "aadharNo":"6728563985"},
+ {"s.no":4, "hospitalHRN":"N6G2E1V8H0K5S4", "hospitalName":"Narayana Health", "doctorName":"Dr. Mayank Yadav", "patientName":"Nisha Goyel", "department":"Pediatrics", "date":"24/02/2023", "aadharNo":"6728563985"},
+ {"s.no":5, "hospitalHRN":"Y5A9U6I0O2T8R4", "hospitalName":"Max Healthcare", "doctorName":"Dr. Mahesh Batra", "patientName":"Nisha Goyel", "department":"Orthopedics", "date":"12/04/2023", "aadharNo":"6728563985"}]
